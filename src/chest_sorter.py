@@ -13,9 +13,6 @@ class ChestSorter:
             for store_chest in self.__store_chests:
                 if not item.get_id() in store_chest.get_filters(): continue
                 # debug
-                print(item.display_name)
+                print(f"{item.display_name}({item.count}) in {store_chest.display_name}")
 
                 # self.__put_item(item, store_chest)
-
-    def __put_item(self, item: ItemStack, chest: StoreChest):
-        pass
