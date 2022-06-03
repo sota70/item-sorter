@@ -20,7 +20,7 @@ temp_chest.put_items([
 ])
 '''
 temp_chest.put_items([
-    ItemStack("dirt", 1), ItemStack("dirt", 1), ItemStack("dirt", 1),
+    ItemStack("dirt", 1), ItemStack("dirt", 1, count=40), ItemStack("dirt", 1, count=50),
     ItemStack("wood", 2), ItemStack("wood", 2),
     ItemStack("coal", 3)
 ])

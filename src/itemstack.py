@@ -19,6 +19,7 @@ class ItemStack:
         if total_size <= self.__max_stackable_size:
             self.count += item.count
             item.count = 0
+            # item count 0 means air so it returns air itemstack
             return ItemStack("air", 0)
         rest = self.__max_stackable_size - self.count
         self.count = self.__max_stackable_size

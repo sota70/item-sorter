@@ -33,6 +33,6 @@ class Chest:
                 replace_succeed = True
                 continue
             current_item.merge(item)
-            if item.count == 0:
+            if item.count < 1:
                 replace_succeed = True
         return replace_succeed
