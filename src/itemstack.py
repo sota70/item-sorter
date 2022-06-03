@@ -11,3 +11,16 @@ class ItemStack:
 
     def get_max_stackable_size(self) -> int:
         return self.__max_stackable_size
+
+    def merge(self, item: any):
+        if not isinstance(item, ItemStack):
+            raise Exception("item parameter is not ItemStack type")
+        total_size = self.count + item.count
+        if total_size <= self.__max_stackable_size:
+            self.count += item.count
+            item.count = 0
+            return ItemStack("air", 0)
+        rest = self.__max_stackable_size - self.count
+        self.count = self.__max_stackable_size
+        item.count -= rest
+        return item

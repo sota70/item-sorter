@@ -27,16 +27,12 @@ class Chest:
             current_item = self.contents[current_item_idx]
             current_item_id = current_item.get_id()
             if current_item_id != item.get_id():
-                if current_item_id != 0: continue
+                current_item_air = current_item_id == 0
+                if not current_item_air: continue
                 self.contents[current_item_idx] = item
                 replace_succeed = True
                 continue
-            total_size = current_item.count + item.count
-            if total_size <= current_item.get_max_stackable_size():
-                current_item.count += item.count
+            current_item.merge(item)
+            if item.count == 0:
                 replace_succeed = True
-                continue
-            rest = current_item.get_max_stackable_size() - current_item.count
-            current_item.count = current_item.get_max_stackable_size()
-            item.count -= rest
         return replace_succeed

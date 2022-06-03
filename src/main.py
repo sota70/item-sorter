@@ -8,6 +8,8 @@ wood_block = ItemStack("wood", 2)
 coal = ItemStack("coal", 3)
 temp_chest = Chest(27, "Temporary Chest")
 '''
+This code is gonna cause an error
+because it creates an instance only once by assigning a itemstack as a variable
 これだとインスタンスが一つしか生成されないため
 プロパティを変更すると全て変わってしまう
 ex) ex_block.count = 0をするとtemp_chestのcontents内のdirt_block全てに反映されてしまう
