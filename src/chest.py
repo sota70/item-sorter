@@ -3,11 +3,12 @@ from itemstack import ItemStack
 
 class Chest:
 
-    def __init__(self, contents_size: int, display_name: str):
+    def __init__(self, contents_size: int, display_name: str, id: int):
         air = ItemStack("air", 0)
         self.contents = [air for i in range(contents_size)]
         self.contents_size = contents_size
         self.display_name = display_name
+        self.__id = id
 
     def sort(self):
         for i in range(self.contents_size):
@@ -36,3 +37,6 @@ class Chest:
             if item.count < 1:
                 replace_succeed = True
         return replace_succeed
+
+    def get_id(self) -> int:
+        return self.__id
