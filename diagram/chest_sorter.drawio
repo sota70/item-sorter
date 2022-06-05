@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
-    <diagram id="2S2ZqFUS1Yq7qDIur_cA" name="Page-1">
-        <mxGraphModel dx="1118" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <diagram id="QGaKg7AIhBooV36lIfkw" name="Page-1">
+        <mxGraphModel dx="550" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,59 +8,156 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="40" width="100" height="60" as="geometry"/>
+                    <mxGeometry x="268.5" y="80" width="100" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="sort()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="10" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="288.5" y="50" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="for item in temp_chest.contents" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="130" width="180" height="60" as="geometry"/>
+                <mxCell id="4" value="FOR LOOP FROM 0 TO (temporary chest's contents size - 1)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="233.5" y="190" width="170" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="for store_chest in store_chests" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
-                    <mxGeometry x="45" y="230" width="170" height="60" as="geometry"/>
+                <mxCell id="6" value="FOR each store chest" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="253.5" y="300" width="130" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="No" style="edgeStyle=none;html=1;" parent="1" source="8" target="10" edge="1">
-                    <mxGeometry x="-0.7143" y="-20" relative="1" as="geometry">
+                    <mxGeometry x="-0.8182" y="-30" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="8" edge="1">
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="8" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="130" y="590" as="targetPoint"/>
+                        <mxPoint x="319" y="920" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="300" y="390"/>
+                            <mxPoint x="540" y="455"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="not item.id in store_chest.filters" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="350" width="200" height="80" as="geometry"/>
+                <mxCell id="8" value="IF store chest's filters don't contain temp item id" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="171" y="400" width="295" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="10" target="12" edge="1">
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="318.5" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="CALL put_item method in store chest WITH temp item&lt;br&gt;and ASSIGN the result of the method AS replace_succeed" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="159" y="620" width="319" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Yes" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="12" target="14" edge="1">
+                    <mxGeometry x="-1" y="-32" relative="1" as="geometry">
+                        <mxPoint x="12" y="2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="12" target="16" edge="1">
+                    <mxGeometry x="-0.9048" y="-38" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="IF replace_succeed is True" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
+                    <mxGeometry x="208.5" y="780" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="1050" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="90" y="1050"/>
+                            <mxPoint x="90" y="1050"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="SET temp item in temp chest &lt;br&gt;TO air itemstack" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="11" y="810" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="16" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="put_item(item, store_chest)" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="45" y="500" width="170" height="60" as="geometry"/>
+                <mxCell id="16" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="268.5" y="970" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="12" target="15" edge="1">
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;" parent="1" source="18" target="20" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="620" width="100" height="60" as="geometry"/>
+                <mxCell id="18" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                    <mxGeometry x="268.5" y="1070" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="15" target="17" edge="1">
+                <mxCell id="20" value="end" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="258.5" y="1210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="30" target="32">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="720" width="100" height="60" as="geometry"/>
+                <mxCell id="30" value="start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="80" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="end" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="70" y="860" width="120" height="60" as="geometry"/>
+                <mxCell id="31" value="register_store_chest(store_chest: StoreChest)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="50" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="No" style="edgeStyle=none;html=1;" edge="1" parent="1" source="32" target="34">
+                    <mxGeometry x="-0.5556" y="-20" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="32">
+                    <mxGeometry x="-0.9775" y="20" relative="1" as="geometry">
+                        <mxPoint x="690" y="480" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="840" y="250"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="already have the store chest" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" vertex="1" parent="1">
+                    <mxGeometry x="605" y="210" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="34" target="36">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="register the store chest" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="615" y="380" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="end" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="39" target="41">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1210" y="80" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="set_temp_chest(temp_chest: Chest)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="50" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="41" target="43">
+                    <mxGeometry x="-1" y="-30" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="41">
+                    <mxGeometry x="-0.977" y="20" relative="1" as="geometry">
+                        <mxPoint x="1260" y="470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1410" y="250"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="the temp chest is &lt;br&gt;StoreChest class" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" vertex="1" parent="1">
+                    <mxGeometry x="1175" y="210" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="43" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="set the temp chest" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="1200" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="end" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="1200" y="520" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
