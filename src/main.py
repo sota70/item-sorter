@@ -6,7 +6,7 @@ from store_chest import StoreChest
 dirt_block = ItemStack("dirt", 1)
 wood_block = ItemStack("wood", 2)
 coal = ItemStack("coal", 3)
-temp_chest = Chest(27, "Temporary Chest")
+temp_chest = Chest(27, "Temporary Chest", 0)
 '''
 This code is gonna cause an error
 because it creates an instance only once by assigning a itemstack as a variable
@@ -24,7 +24,15 @@ temp_chest.put_items([
     ItemStack("wood", 2), ItemStack("wood", 2),
     ItemStack("coal", 3)
 ])
-store_chest1 = StoreChest(27, [ 1 ], "Storage1")
-store_chest2 = StoreChest(27, [ 2, 3 ], "Storage2")
-chest_sorter = ChestSorter(temp_chest, [ store_chest1, store_chest2 ])
+store_chest1 = StoreChest(27, [ 1 ], "Storage1", 1)
+store_chest2 = StoreChest(27, [ 2, 3 ], "Storage2", 2)
+chest_sorter = ChestSorter(temp_chest, [ store_chest1 ])
+chest_sorter.register_store_chest(store_chest2)
 chest_sorter.sort()
+# debug
+print("In StoreChest1")
+print(list(map(lambda item: f"{item.display_name}({item.count})", store_chest1.contents)))
+print("In StoreChest2")
+print(list(map(lambda item: f"{item.display_name}({item.count})", store_chest2.contents)))
+print("In TempChest")
+print(list(map(lambda item: f"{item.display_name}({item.count})", temp_chest.contents)))
